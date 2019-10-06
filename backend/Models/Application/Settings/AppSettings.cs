@@ -14,5 +14,6 @@ namespace backend.Models.Application.Settings
     public class DataProvider
     {
         public string apiKey { get; set; }
+        public string apiRestBaseUrl { get; set; }
     }
 }

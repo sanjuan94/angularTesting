@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using backend.AppAdapter;
+using backend.AppAdapter.interfaces;
+using backend.AppServices;
+using backend.AppServices.interfaces;
 using backend.Models.Application.Settings;
 using backend.Models.Application.Settings.Interfaces;
 using Microsoft.AspNetCore.Builder;
@@ -36,6 +40,10 @@ namespace backend
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.Configure<AppSettings>(Configuration.GetSection("App"));
             services.AddTransient<IAppSettings, AppSettings>();
+
+            services.AddTransient<IExchangeAdapter, ExchangeAdapter>();
+            services.AddTransient<IExchangeService, ExchangeService>();
+
 
         }
 
