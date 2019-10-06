@@ -5,6 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="AppServices\" />
+    <Folder Include="AppAdapter\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
